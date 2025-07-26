@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kingyo Sukui</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1 class="game-title">Kingyo Sukui</h1>
+
+      <div class="collected-area">
+        <span class="collected-label">Collected flag:</span>
+        <span id="collected-flag"></span>
+      </div>
+
+      <div class="tank" id="tank">
+        <div class="flag-container" id="flag-container"></div>
+      </div>
+
+      <div class="result-overlay" id="result-overlay">
+        <div class="result-content">
+          <div class="result-text" id="result-text"></div>
+          <button class="restart-btn" id="restart-btn">Play again!</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
