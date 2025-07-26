@@ -3,7 +3,7 @@ services:
   pet_name:
     build:
       context: .
-    restart: alwayss
+    restart: always
     working_dir: /home/pwn
     container_name: pet_name
     ulimits:
