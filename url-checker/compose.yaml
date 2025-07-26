@@ -1,0 +1,8 @@
+services:
+  url-checker:
+    build:
+      context: .
+    working_dir: /home/ctf/url-checker
+    restart: always
+    ports:
+      - "33457:33457"
