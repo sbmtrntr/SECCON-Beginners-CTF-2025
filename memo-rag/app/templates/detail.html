@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% if memo.visibility == 'secret' and not authorized %}
+<form method="post">
+    <div class="mb-3">
+        <label for="password" class="form-label">パスワード</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">表示</button>
+</form>
+{% else %}
+<pre>{{ memo.body }}</pre>
+{% endif %}
+{% endblock %}
