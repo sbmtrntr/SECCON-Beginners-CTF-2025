@@ -1,0 +1,23 @@
+{
+  "name": "memo4b",
+  "version": "1.0.0",
+  "description": "CTF challenge - memo4b",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@braintree/sanitize-url": "^7.1.1",
+    "@kamilkisiela/fast-url-parser": "^1.1.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fast-url-parser": "^1.1.3",
+    "jsuri": "^1.3.1",
+    "marked": "^9.1.2",
+    "normalize-url": "^8.0.2",
+    "sanitize-html": "^2.11.0",
+    "urijs": "^1.19.11",
+    "url-parse": "^1.5.10"
+  }
+}

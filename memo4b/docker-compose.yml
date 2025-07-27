@@ -1,0 +1,47 @@
+services:
+  web:
+    build: .
+    ports:
+      - "50000:50000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./flag.txt:/app/flag.txt:ro
+    restart: always
+    networks:
+      ctf-network:
+        ipv4_address: 172.20.0.3
+
+  bot:
+    build: ./bot
+    ports:
+      - "50001:50001"
+    environment:
+      - WEBAPP_URL=http://web:50000
+      - NODE_ENV=production
+    depends_on:
+      - web
+    restart: always
+    networks:
+      - ctf-network
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - SYS_ADMIN
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1024M
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+networks:
+  ctf-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

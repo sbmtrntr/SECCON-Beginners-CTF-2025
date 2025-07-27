@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memo4b</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>memo4b</h1>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="title">タイトル:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="md">内容:</label>
+                <textarea id="md" name="md" rows="10" required></textarea>
+            </div>
+            <button type="submit">メモを作成</button>
+        </form>
+    </div>
+</body>
+</html>
